@@ -1,0 +1,57 @@
+<div class="card rounded-0">
+  <div class="card-header bg-ru">
+      <h3 class="mb-0">Signup here</h3>
+  </div>
+  <div class="card-body">
+    <form name="myform">
+     
+					<div class="form-group">
+						<label for="myName"> Name *</label>
+						<input id="myName" name="name"class="form-control" type="text" 
+              required
+              placeholder="Please enter your name" >
+					</div>         
+					<div class="form-group">
+						<label for="phone">Phone Number *</label>
+						<input id="phone" name="phone"
+             class="form-control" type="text" required 
+             placeholder="Please enter a valid phone number">
+						
+					</div>
+          <div class="form-group">
+						<label for="email">Email * </label>
+						<input name="email" required
+              type="text" id="email" class="form-control"
+              placeholder="Enter a valid email">
+					
+					</div>
+          <div class="form-group">
+						<label for="password">Password</label>
+						<input name="password"
+              type="password" id="password" class="form-control" >
+						<span id="error_phone" class="text-danger"></span>
+					</div>
+           <div class="form-group">
+						<label for="gender">Gender</label>
+						<select name="gender" id="gender" class="form-control" >
+            
+							<option >select</option>							
+						</select>
+						<span id="error_gender" class="text-danger"></span>
+					</div>
+          <div class="form-group">
+						<label for="role">Role</label>
+						<select name="role" id="role" class="form-control">
+							<option>select </option>						
+						</select>
+						<span id="error_role" class="text-danger"></span>
+					</div>
+          <div class="form-group">				
+					  <button type="submit" value="submit" class="btn bg-ru center">Submit</button>
+            <button type="button" value="delete" class="btn bg-ru center ml-3">Delete</button>
+            <button type="button" value="reset" class="btn bg-ru center ml-3">Reset</button>		
+          </div>	
+      </form>
+  </div>
+ 
+</div>

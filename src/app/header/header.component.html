@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-info">
+    <a class="navbar-brand" routerLink="/">ReadyGo{{title}}</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav mr-auto">
+       
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/signup" routerLinkActive="active">Signup</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="javascript: void(0)" 
+              routerLinkActive="active" id="navbardrop" data-toggle="dropdown">Admissions
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink="/admissions/undergraduates">Under Graduate</a>
+            <a class="dropdown-item" routerLink="/admissions/graduates">Graduate</a>        
+          </div>
+      </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
