@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { RegisterService } from '../shared/register-service.service'; 
+import {AngularFireList } from 'angularfire2/database';
+import { RegisterModel } from '../shared/register-model';
 
 @Component({
   selector: 'app-users',
@@ -7,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UsersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private usersService: RegisterService) { }
 
   ngOnInit() {
   }

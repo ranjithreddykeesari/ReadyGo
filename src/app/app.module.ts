@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule} from '@angular/router';
+import { AngularFireModule } from 'angularfire2';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { environment } from '../environments/environment';
+import { FormsModule } from '@angular/forms'; 
 
 import { AppComponent } from './app.component';
 import { AboutComponent } from './about/about.component';
@@ -27,7 +31,10 @@ export const ROUTES: Routes = [
     UsersComponent
   ],
   imports: [
-    BrowserModule,RouterModule.forRoot(ROUTES)
+    BrowserModule,RouterModule.forRoot(ROUTES),
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule,
+    FormsModule
 
   ],
   providers: [],
