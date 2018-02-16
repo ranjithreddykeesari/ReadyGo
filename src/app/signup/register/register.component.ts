@@ -29,7 +29,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit(form: any){
-    if(form.value.key == null){
+    if(form.value.$key == null){
       this.regCompService.insertUser(form.value);      
     }else{
       this.regCompService.updateUser(form.value);
@@ -54,6 +54,13 @@ export class RegisterComponent implements OnInit {
       }
     }
   }
+  deleteUser(form:any){
+    if(confirm('Are you sure you want to delete this user')==true){
+      this.regCompService.deleteUser(form.value);
+      this.resetForm(form);
+    }
+
+  }
   resetForm(form? : any){
     if(form != null)
     form.reset();
@@ -67,11 +74,5 @@ export class RegisterComponent implements OnInit {
       role : 1
     }
   }
-  deleteUser(form:any){
-    if(confirm('Are you sure you want to delete this user')==true){
-      this.regCompService.deleteUser(form.value);
-      this.resetForm(form);
-    }
-
-  }
+  
 }

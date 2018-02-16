@@ -9,10 +9,23 @@ import { RegisterModel } from '../shared/register-model';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-
+  usersList: RegisterModel[];
   constructor(private usersService: RegisterService) { }
 
   ngOnInit() {
-  }
+   var da = this.usersService.getData();
+   da.snapshotChanges().subscribe(item => {
+     this.usersList = [];
+     item.forEach(element => {
+       var conJs = element.payload.toJSON();
+       conJs['$key'] = element.key;
+       this.usersList.push(conJs as RegisterModel)
 
+     })
+   });
+
+  }
+  onItemClick(user: RegisterModel){
+    this.usersService.selectedUser = Object.assign({},user);
+  }
 }
