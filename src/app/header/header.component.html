@@ -23,6 +23,14 @@
             <a class="dropdown-item" routerLink="/admissions/undergraduates">Under Graduate</a>
             <a class="dropdown-item" routerLink="/admissions/graduates">Graduate</a>        
           </div>
+           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
+            <button class="btn btn-outline-primary" ngbDropdownToggle>Drop me</button>
+            <div class="dropdown-menu" ngbDropdownMenu>
+              <button class="dropdown-item">One</button>
+              <button class="dropdown-item">Two</button>
+              <button class="dropdown-item">Four!</button>
+            </div>
+          </div>
       </li>
       </ul>
       <form class="form-inline my-2 my-lg-0">
